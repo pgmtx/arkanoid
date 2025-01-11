@@ -17,9 +17,23 @@ Many breakout/arkanoid style games have been written in Love2D (like nooway's ar
  <span style="align:center">Anima was used in all of these states</span>
 </p>
 
-## How to run the game
+## Extracting the assets
 
-First of all extract the assets you can use winrar or the rar command (I donot remember the rar command so sorry you will have to figure that out on your own if you are on linux/mac) and then run "love ." or you could run the game in castle if you are on windows/mac
+### Windows
+
+Use WinRAR or the `rar` command.
+
+### Mac
+
+Install rar (`brew install rar`), then type `unrar x assets.part.1.rar`. The program will figure the other parts automatically.
+
+### Linux
+
+Install unrar (on Ubuntu and its derivatives it will be `sudo apt install unrar`), then run `unrar x assets.part.1.rar`.
+
+### Running the game
+
+Run `love .`, or you could run the game in castle if you are on Windows/mac.
 
 ## Development
 
