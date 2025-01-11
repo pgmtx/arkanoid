@@ -22,4 +22,7 @@ end
 
 function love.keypressed(key)
     love.keyboard.lastKeyPressed=key
+    if key == "f11" then
+        push:switchFullscreen()
+    end
 end
