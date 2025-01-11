@@ -11,7 +11,7 @@ require 'lib/xkf'
 require 'src/constants'
 
 --defines the utility functions related to generating quads
-require 'src/util'
+require 'src/quads'
 
 --initialise the global objects such as gStateMachine,gFonts,etc and
 require 'src/resources'
