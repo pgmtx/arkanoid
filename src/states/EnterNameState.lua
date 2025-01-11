@@ -47,7 +47,7 @@ function EnterNameState:render()
 	love.colors:setColor("white")
 	love.graphics.printf("Your Score : "..self.score,0,VIRTUAL_HEIGHT/2-268,VIRTUAL_WIDTH,'center')
 	love.graphics.setFont(gFonts.medium)
-	if not self.frozen then self.enteranim:print("Hit Enter to Continue",VIRTUAL_WIDTH/2-130,VIRTUAL_HEIGHT/2+240)
+	if not self.frozen then self.enteranim:print("Hit Space to Continue",VIRTUAL_WIDTH/2-130,VIRTUAL_HEIGHT/2+240)
 	else self.enteranim:print("Enter your Name",VIRTUAL_WIDTH/2-110,VIRTUAL_HEIGHT/2+240) end
 	love.colors:setColor("white",0.7)
 	love.graphics.draw(gTextures['win'],400,VIRTUAL_HEIGHT/2-85,0,1.4+(self.frozen and 1 or self.name:len()/10),1.4,gTextures['win']:getWidth()/2)

@@ -50,7 +50,7 @@ function ServeState:update(dt)
 	self.hudbox:updateS()
 	self.paddle:update(dt)
 	if not self.enterpressed then self.ball.x=self.paddle.x+self.paddle.width/2-self.ball.width/2 end
-	if (love.keyboard.lastKeyPressed=='return' or love.keyboard.lastKeyPressed=='enter') and  self.hudbox:animationOver() and self.levelanim:animationOver() and not self.enterpressed then
+	if (love.keyboard.lastKeyPressed=='space') and  self.hudbox:animationOver() and self.levelanim:animationOver() and not self.enterpressed then
 		self.enterpressed=true
 		self.levelanim:animationMark()
 		self.hudbox:animationMark()		
@@ -116,7 +116,7 @@ function ServeState:render()
 	love.colors:reset()
 	love.graphics.setFont(gFonts.large)
 	if self.begin and not self.enterpressed then
-		love.graphics.printf("Press Enter to Serve!",0,VIRTUAL_HEIGHT/2-20,VIRTUAL_WIDTH,'center')
+		love.graphics.printf("Press Space to Serve!",0,VIRTUAL_HEIGHT/2-20,VIRTUAL_WIDTH,'center')
 	end
 	self.paddle:render()
 	self.ball:render()

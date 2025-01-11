@@ -17,7 +17,7 @@ function LevelCompleteState:enter(params)
 end
 function LevelCompleteState:update(dt)
 	self.explodeanim.particle:update(dt)
-	if love.keyboard.lastKeyPressed=='return' or love.keyboard.lastKeyPressed=='enter' then
+	if love.keyboard.lastKeyPressed=='space' then
 		gStateMachine:change('serve',{
 			level=self.level+1,
 			paddle=self.paddle,

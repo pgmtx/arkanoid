@@ -103,7 +103,7 @@ function PaddleSelectState:update(dt)
 		anima.left:newAnimation('move',0,5)
 		anima.left:animationStart()		
 		self.paddle.color=math.max(1,self.paddle.color-1)
-	elseif love.keyboard.lastKeyPressed=='return' or love.keyboard.lastKeyPressed=='enter' then
+	elseif love.keyboard.lastKeyPressed=='space' then
 		gStateMachine:change('serve',{
 			paddle=Paddle:init(self.paddle.color,2),
 			ball=Ball(math.random(1)),
@@ -134,5 +134,5 @@ function PaddleSelectState:render()
 	love.colors:setOpacity(1)	
 	love.graphics.print("Select your Paddle",35,45)
 	love.graphics.setFont(gFonts.medium)
-	anima.text:print("Hit Enter to Continue",VIRTUAL_WIDTH/2-135,VIRTUAL_HEIGHT/2+260)
+	anima.text:print("Hit Space to Continue",VIRTUAL_WIDTH/2-135,VIRTUAL_HEIGHT/2+260)
 end

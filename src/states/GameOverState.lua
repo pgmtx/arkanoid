@@ -33,7 +33,7 @@ end
 
 function GameOverState:update()
 	self.highscoreanim:updateF()	
-	if (love.keyboard.lastKeyPressed=='return' or love.keyboard.lastKeyPressed=='enter') and not gSounds.win:isPlaying() then
+	if (love.keyboard.lastKeyPressed=='space') and not gSounds.win:isPlaying() then
 		gSounds.blip:play()
 		if self.ishighscore then
 			gStateMachine:change('enter-name',{
@@ -66,7 +66,7 @@ function GameOverState:render()
 		love.colors:setColor("white")	
 		love.graphics.printf("New HighScore!!!",0,VIRTUAL_HEIGHT/2-82,VIRTUAL_WIDTH,'center')
 	end
-	self.highscoreanim:printf("Hit Enter to Continue!",0,VIRTUAL_HEIGHT/2+252,VIRTUAL_WIDTH,'center')
+	self.highscoreanim:printf("Hit Space to Continue!",0,VIRTUAL_HEIGHT/2+252,VIRTUAL_WIDTH,'center')
 	
 end
 

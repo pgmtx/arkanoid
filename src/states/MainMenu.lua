@@ -20,7 +20,7 @@ end
 function MainMenu:update(dt)
     if love.keyboard.lastKeyPressed=='escape' then
         love.event.quit() 
-    elseif love.keyboard.lastKeyPressed=='enter' or love.keyboard.lastKeyPressed=='return' then
+    elseif love.keyboard.lastKeyPressed=='enter' or love.keyboard.lastKeyPressed=='return' or love.keyboard.lastKeyPressed=='space' then
 
         if selected==gTextures['play'] then
             gStateMachine:change('paddle-select')            
